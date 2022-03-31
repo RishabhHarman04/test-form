@@ -20,12 +20,19 @@ def test_form(setUp):
     driver.get("https://iprimedtraining.herokuapp.com/")
     driver.find_element_by_name("name").send_keys(name)
     time.sleep(1)
-    driver.find_element_by_xpath("/html/body/div/div/div[2]/form/table/tbody/tr[2]/td[2]/input[1]").click()
+    driver.find_element_by_xpath("/html/body/div/div/div[2]/form/table/tbody/tr[2]/td[2]/input").send_keys(release)
     time.sleep(1)
-    driver.find_element_by_xpath("/html/body/div/div/div[2]/form/table/tbody/tr[3]/td[2]/select/option[3]").click()
+    driver.find_element_by_xpath("/html/body/div/div/div[2]/form/table/tbody/tr[3]/td[2]/input").send_keys(director_name)
     time.sleep(1)
-    driver.find_element_by_xpath("/html/body/div/div/div[2]/form/table/tbody/tr[4]/td[2]/div/input").click()
+    driver.find_element_by_xpath("/html/body/div/div/div[2]/form/table/tbody/tr[4]/td[2]/input").send_keys(distributor)
     time.sleep(1)
-    driver.find_element_by_xpath("/html/body/div/div/div[2]/form/table/tbody/tr[5]/td[2]/button").click()
-    time.sleep(3)'''
+    driver.find_element_by_xpath("/html/body/div/div/div[2]/form/table/tbody/tr[5]/td[2]/input").send_keys(producer)
+    time.sleep(1)
+    driver.find_element_by_xpath("/html/body/div/div/div[2]/form/table/tbody/tr[6]/td[2]/select").send_keys(language)
+    time.sleep(1)
+    driver.find_element_by_xpath("/html/body/div/div/div[2]/form/table/tbody/tr[7]/td[2]/button").click()
+    driver.close()
+    print("test case has successfully completed")
+
+
 
